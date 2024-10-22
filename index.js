@@ -17,8 +17,8 @@ btn.onclick = async () => {
 }
 
 filterData.onclick = () => {
-    let category = document.getElementById("search").value;
-    let data = JSON.parse(localStorage.getItem("data")) || [];
+    let category = document.getElementById("search").value;// Get the category selected or typed in the search box
+    let data = JSON.parse(localStorage.getItem("data")) || [];// Retrieve data from localStorage
     
     if (data.length > 0) {
         if (category) {
@@ -34,7 +34,7 @@ filterData.onclick = () => {
 
 
 filterData0.onclick = () => {
-    let data = JSON.parse(localStorage.getItem("data")) || [];
+    let data = JSON.parse(localStorage.getItem("data")) || [];// Retrieve data from localStorage
     if (data.length > 0) {
         data = data.filter(obj => obj["category"] === "electronics");
         displayData(data);
